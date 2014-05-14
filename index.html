@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Mass Numbered Tweeting</title>
+</head>
+ 
+<body>
+These script make use of Matt Harris' tmhOAuth library, most of the codes are adapted from Adam Green's ebook
+You can find Matt's library here: https://github.com/themattharris/tmhOAuth
+and Adam's ebook here: 140dev.com/member
+For the numbered "base text" you need to edit it manually in post_tweet_batch.php
+See full explanations at dar.web.id
+<br>
+
+--------------------------------------------------------
+<br> Generate Daftar Followers dari @Username
+<form action="get_followers.php" method=post>
+<br> Username (tanpa tanda @):
+<br> <input type="text" name="akun">
+<br> <input type="submit" name="submit" value="Generate!">
+</form>
+
+--------------------------------------------------------
+<br> Generate Daftar Friends dari @Username
+<form action="get_friends.php" method=post>
+<br> Username (tanpa tanda @):
+<br> <input type="text" name="akun">
+<br> <input type="submit" name="submit" value="Generate!">
+</form>
+
+--------------------------------------------------------
+<br> Mengetwit Biasa
+<form action="post_tweet.php" method=post>
+<br> Tweet:
+<br> <input type="text" name="teks_biasa">
+<br> <input type="submit" name="submit" value="Tweetkan!">
+</form>
+
+---------------------------------------------------------
+<br> Mengetwit Numbered Batch 
+<form action="post_tweet_batch.php" method=post>
+<br> Tweet:
+"Hey @username assalamu'alaikum 999"... dst
+<br> Daftar Username 
+<br> <input type="text" name="pengikut">
+<br> Twit pertama dalam batch ini akan bernomor <input type="text" name="urutanpertama">
+<br> <input type="submit" name="submit" value="Gaskan!">
+</form>
+
+</body>
+</html>
