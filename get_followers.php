@@ -27,7 +27,7 @@ $connection = new tmhOAuth(array(
 $akun = $_POST['akun'];
 
 
-// Get @$akun's friends
+// Get @$akun's followers
 $connection->request('GET', $connection->url('1.1/followers/list'),
 array('screen_name' => $akun, 'include_user_entities' => 'false', 'skip_status' => 'true'));
 
