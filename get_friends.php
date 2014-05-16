@@ -28,7 +28,7 @@ $akun = $_POST['akun'];
 
 
 // Get @$akun's friends
-$connection->request('GET', $connection->url('1.1/followers/list'),
+$connection->request('GET', $connection->url('1.1/friends/list'),
 array('screen_name' => $akun, 'include_user_entities' => 'false', 'skip_status' => 'true'));
 
 // Get the HTTP response code for the API request
